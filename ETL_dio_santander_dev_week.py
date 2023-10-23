@@ -106,7 +106,7 @@ for timestamp, data in data_market["Time Series (60min)"].items():
 
 
 ########################################
-#TRANSFORM
+#TRANSFORM / LOAD
 # sending the best investments opportunities for all private clients
 ######################################## 
 symbol = 'AAPL'
@@ -124,6 +124,7 @@ news = {
 }
 lista = [1,2,3,4,5,6,7,8,9,10]
 
+# searching good opportunities for privates clients investments
 # several news created by chatgpt prompt
 # must complete update_put function with some news index (randomly)
 for user in privates:
@@ -133,8 +134,3 @@ for user in privates:
     status = update_user(user, news[msg])
     if status:
         print(f'ID: {user} -> atualizado com as últimas notícias do {symbol}.')
-
-########################################
-# LOAD
-# searching good opportunities for privates clients investments
-########################################
